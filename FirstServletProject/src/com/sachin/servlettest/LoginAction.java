@@ -56,7 +56,7 @@ public class LoginAction extends HttpServlet {
 		{
 			
 			PrintWriter out = resp.getWriter();
-			out.println("<font color=red>Either user name or password is wrong.</font>");
+			out.println("<font color=red>Either user name or password is wrongTest.</font>");
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.html");
 			rd.include(req, resp);
 		}
