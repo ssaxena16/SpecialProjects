@@ -1,5 +1,10 @@
 package com.sachin.strutsexample;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -16,10 +21,42 @@ public class LoginAction extends Action{
 		// TODO Auto-generated method stub
 		
 		LoginForm loginform = (LoginForm)form;
+		String usernameDataBase = "";
+		String passwordDatabase = "" ;
 		String userName = loginform.getUserName();
 		String password = loginform.getPassword();
 		
-		if((userName != null && password !=null) && (userName.equalsIgnoreCase("Sachin") && password.equalsIgnoreCase("Saxena"))  )
+		Connection con = null;
+		Statement smt = null;
+		
+		try
+		{
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdatabase", "root", "Sachin123$");
+			
+			smt = con.createStatement();
+			
+			String sql = "Select * from test_table";
+			ResultSet rs  = smt.executeQuery(sql);
+			if(rs.next())
+			{
+				usernameDataBase = rs.getString("name");
+				passwordDatabase = rs.getString("value");
+				
+			}
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			smt.close();
+			con.close();
+		}
+		
+		if((userName != null && password !=null) && (userName.equalsIgnoreCase(usernameDataBase) && password.equalsIgnoreCase(passwordDatabase))  )
 		{
 			return mapping.findForward("success");
 		}
