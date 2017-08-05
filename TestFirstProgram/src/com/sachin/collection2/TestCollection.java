@@ -10,8 +10,8 @@ public class TestCollection {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		List<String> list = new ArrayList<String>();
-		list.add("First");
-		list.add("Second");
+		list.add("First12");
+		list.add("Second12");
 		list.add("Third");
 		list.add("Four");
 		list.add("Five");
