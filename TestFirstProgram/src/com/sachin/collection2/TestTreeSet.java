@@ -32,6 +32,7 @@ public class TestTreeSet {
 		Country count4 = new Country("PAK", 101);
 		Country count5 = new Country("Rusia", 65);
 		TreeSet<Country> ts  = new TreeSet<Country>();
+		
 		ts.add(count1);
 		ts.add(count2);
 		ts.add(count3);

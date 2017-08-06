@@ -16,6 +16,8 @@ public class TestHashMap {
 		map.put("key3", "Third");
 		map.put("key4", "Four");
 		map.put("key5", "Five");
+		map.remove("Key1");
+		System.out.println(""+map);
 		// First Way to iterate a Map
 		for(Map.Entry<String, String> mapentry : map.entrySet())
 		{
