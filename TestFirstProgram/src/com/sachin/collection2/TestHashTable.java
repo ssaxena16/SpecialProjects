@@ -1,5 +1,6 @@
 package com.sachin.collection2;
 
+import java.util.Enumeration;
 import java.util.Hashtable;import java.util.Map;
 
 public class TestHashTable {
@@ -17,6 +18,13 @@ public class TestHashTable {
 			System.out.println("  "+mampentry.getKey()+ "  "+mampentry.getValue()  );
 		}
 
+		Enumeration<String> enumuration = hashtable.keys();
+		while(enumuration.hasMoreElements())
+		{
+			String key = enumuration.nextElement();
+			String value = hashtable.get(key);
+			System.out.println("  "+key+"   "+value);
+		}
 	}
 
 }
