@@ -34,6 +34,11 @@ public class TestWraperConcept {
 		if (b1.equals(b2)) {
 			System.err.println("true"); // this is print
 		}
+		int t = 10;
+		String str = String.valueOf(t);
+		System.out.println(""+str);
+		Double d = Double.valueOf(str);
+		System.out.println(""+d);
 	}
 
 }
