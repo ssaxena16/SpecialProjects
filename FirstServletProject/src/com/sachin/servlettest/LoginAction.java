@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 import javax.servlet.RequestDispatcher;
@@ -42,24 +43,35 @@ public class LoginAction extends HttpServlet {
 				passwordDatabase = rs.getString("value");
 				
 			}
+			if(usernameDataBase.equals(userName) && passwordDatabase.equals(passWord))
+			{
+				resp.sendRedirect("success.html");
+			}
+			else
+			{
+				
+				PrintWriter out = resp.getWriter();
+				out.println("<font color=red>Either user name or password is wrongTestPlease</font>");
+				RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.html");
+				rd.include(req, resp);
+			}
 			
 		}
 		catch(Exception e)
 		{
 			e.printStackTrace();
 		}
-		if(usernameDataBase.equals(userName) && passwordDatabase.equals(passWord))
-		{
-			resp.sendRedirect("success.html");
-		}
-		else
-		{
+		finally {
+			try {
+				smt.close();
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
-			PrintWriter out = resp.getWriter();
-			out.println("<font color=red>Either user name or password is wrongTestPlease</font>");
-			RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.html");
-			rd.include(req, resp);
 		}
+		
 		
 		
    }
