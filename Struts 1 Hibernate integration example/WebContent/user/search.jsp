@@ -34,10 +34,10 @@
 			<td bgcolor="#FF9900">Name</td>
 			<td bgcolor="#FF9900">Age</td>
 		</tr>
-		<logic:iterate name="users" id="user">
+		<logic:iterate name="users" id="user1">
 			<tr>
-				<td bgcolor="#DBEAF9"><bean:write name="user" property="name" /></td>
-				<td bgcolor="#DBEAF9"><bean:write name="user" property="age" /></td>
+				<td bgcolor="#DBEAF9"><bean:write name="user1" property="name" /></td>
+				<td bgcolor="#DBEAF9"><bean:write name="user1" property="age" /></td>
 			</tr>
 		</logic:iterate>
 	</table>

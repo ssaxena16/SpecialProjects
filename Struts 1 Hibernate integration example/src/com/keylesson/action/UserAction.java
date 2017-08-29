@@ -32,7 +32,9 @@ public class UserAction extends DispatchAction {
 			throws Exception {
 		UserForm userForm = (UserForm) form;
 		List users = new UserDAO().getUsers(userForm.getName());
+		System.out.println("List of users   =="+users);
 		request.setAttribute("users", users);
+	
 		return mapping.findForward("search");
 	}
 	

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+"http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+
+<!--  Form Beans -->
+<form-beans>
+<form-bean name="loginform" type="com.sachin.form.LoginForm"></form-bean>
+<form-bean name="usersearchform" type="com.sachin.form.UserSearchForm"></form-bean>
+<form-bean name="user" type="com.sachin.persistence.User"></form-bean>
+<form-bean name="adduserform" type="com.sachin.form.AddUserForm"></form-bean>
+</form-beans>
+
+<!--  Action Mapping -->
+<action-mappings>
+<action name = "loginform" path="/login" type="com.sachin.action.LoginAction">
+<forward name="success" path= "/userinfo.jsp"></forward>
+<forward name ="faliure" path ="/failure.jsp"></forward>
+</action>
+<action name = "usersearchform" path="/user" type="com.sachin.action.UserSearchAction">
+<forward name="searchsuccess" path= "/userinfo.jsp"></forward>
+<forward name="updateuser" path= "/adduser.jsp"></forward>
+</action>
+<action name = "adduserform" path="/adduser" type="com.sachin.action.AddUserAction">
+<forward name="adduser" path= "/adduser.jsp"></forward>
+<forward name="usersearch" path="/userinfo.jsp"></forward>
+</action>
+<action name="loginform" path="/logout" type = "com.sachin.action.LogoutAction">
+<forward name="loginpage" path= "/index.jsp"></forward>
+</action>
+</action-mappings>
+</struts-config>
