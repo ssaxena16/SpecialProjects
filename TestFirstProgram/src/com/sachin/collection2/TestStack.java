@@ -25,7 +25,7 @@ class StackTest {
 			System.out.println("Stack is underflow");
 		} else {
 			int element = (int) stack[index];
-			System.out.println("Stack is removed " + element + "");
+			System.out.println("Element " + element + " is removed from stack");
 			index = index - 1;
 
 		}
