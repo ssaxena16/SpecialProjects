@@ -5,9 +5,30 @@
  xmlns:p="http://www.springframework.org/schema/p"  
  xsi:schemaLocation="http://www.springframework.org/schema/beans  
  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ <bean id = "subjectbean1" class = "com.sachin.springfirstprogram.Subject">
+ <property name="subjectName" value="C"></property>
+ <property name="bookName" value="C Programming"></property>
+ </bean>
+ <bean id = "subjectbean2" class = "com.sachin.springfirstprogram.Subject">
+ <property name="subjectName" value="Java"></property>
+ <property name="bookName" value="Complete Reference"></property>
+ </bean>
+ <bean id = "subjectbean3" class = "com.sachin.springfirstprogram.Subject">
+ <property name="subjectName" value="OS"></property>
+ <property name="bookName" value="Galvin"></property>
+ </bean>
    
 <bean id="studentbean" class="com.sachin.springfirstprogram.Student">
 <property name= "name" value = "Sachin Saxena"></property>
+<property name= "rollNo" value = "27"></property>
+<property name= "program" value = "Computer Science"></property>
+<property name="subject" >
+<list>
+<ref bean="subjectbean1"/>
+<ref bean="subjectbean2"/>
+<ref bean="subjectbean3"/>
+</list>
+</property>
 </bean>   
    
 </beans>

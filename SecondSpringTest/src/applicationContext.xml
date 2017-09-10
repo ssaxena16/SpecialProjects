@@ -5,8 +5,56 @@
  xmlns:p="http://www.springframework.org/schema/p"  
  xsi:schemaLocation="http://www.springframework.org/schema/beans  
  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+ <!--  Address -->
+ <bean id = "addressbean" class = "com.sachin.secondspringtest.Address">
+  <constructor-arg value= "BTComplex100"></constructor-arg>
+ <constructor-arg value = "PanchKula"></constructor-arg>
+ <constructor-arg value ="Haryana"></constructor-arg>
+ 
+ <!-- <property name="streetNo" value= "BTComplex100"></property>
+ <property name="disticName" value = "PanchKula"></property>
+ <property name="state" value = "Haryana"></property> -->
+ </bean>
+ <bean id = "addressbean1" class = "com.sachin.secondspringtest.Address">
+  <constructor-arg value= "BTComplex200"></constructor-arg>
+ <constructor-arg value = "Chandigarh"></constructor-arg>
+ <constructor-arg value ="Chandigarh"></constructor-arg>
+</bean>
+ <bean id = "addressbean2" class = "com.sachin.secondspringtest.Address">
+  <constructor-arg value= "BTComplex300"></constructor-arg>
+ <constructor-arg value = "SPN"></constructor-arg>
+ <constructor-arg value ="UP"></constructor-arg>
+</bean>
+ 
+ 
+ <!--  Employee -->
  <bean id = "employeebean" class ="com.sachin.secondspringtest.Employee">
  <constructor-arg value = "10" > </constructor-arg>
  <constructor-arg value = "Sachin" > </constructor-arg>
- </bean>
+ <constructor-arg>
+ <map>
+ <entry key="1" value-ref="addressbean"></entry>
+  <entry key="2" value-ref="addressbean1"></entry>
+  <entry key="3" value-ref="addressbean2"></entry>
+ </map>
+ </constructor-arg>
+ 
+</bean>
+
+
+<!--  Child Employee Bean -->
+
+<bean id="childempbean" parent="employeebean">
+<constructor-arg>
+ <list>
+ <value>"Software Developer"</value>
+ <value>"Software Programmer"</value>
+ <value>"Software Architecture"</value>
+ <value>"Scrum Member"</value>
+ </list>
+ </constructor-arg>
+</bean>
+
+
 </beans>

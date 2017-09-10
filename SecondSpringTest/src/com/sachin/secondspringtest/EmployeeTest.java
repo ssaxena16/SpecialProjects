@@ -11,7 +11,7 @@ public class EmployeeTest {
 		// TODO Auto-generated method stub
 		Resource resource = new ClassPathResource("applicationContext.xml");
 		BeanFactory factory = new XmlBeanFactory(resource);
-		Employee employee = (Employee)factory.getBean("employeebean");
+		Employee employee = (Employee)factory.getBean("childempbean");
         employee.empInfo();
 	}
 
