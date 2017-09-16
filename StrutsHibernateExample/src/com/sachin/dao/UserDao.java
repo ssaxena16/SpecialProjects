@@ -116,7 +116,7 @@ public class UserDao {
 		try {
 			session.beginTransaction();
 			user = (User) session.createQuery("from User where username like :name")
-					.setParameter("name", "%" + userName + "%").uniqueResult();
+					.setParameter("name", userName).uniqueResult();
 			session.delete(user);
 			session.getTransaction().commit();
 		} catch (Exception e) {
