@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/commons-beanutils-1.8.0.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/commons-chain-1.2.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/commons-digester-1.8.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/commons-pool-1.5.4.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/hibernate-commons-annotations-3.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/hibernate-core-3.6.10.Final.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/javassist-3.12.0.GA.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/mysql-connector-java-5.1.10.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/org.springframework.aop-sources-3.0.3.RELEASE (1).jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/org.springframework.asm-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/org.springframework.beans-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/org.springframework.context-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/org.springframework.core-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/org.springframework.expression-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/org.springframework.orm-3.0.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/org.springframework.transaction-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/slf4j-api-1.5.6.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/slf4j-log4j12-1.5.6.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/spring-aop-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/spring-hibernate3.jar"/>
+	<classpathentry kind="lib" path="F:/ThirdParty/SpringHibernateIntegration jars/spring-jdbc-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
