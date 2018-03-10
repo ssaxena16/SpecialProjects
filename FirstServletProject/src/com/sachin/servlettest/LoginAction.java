@@ -20,7 +20,6 @@ public class LoginAction extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
 		String userName = req.getParameter("userName");
 		String passWord = req.getParameter("passWord");
 		String usernameDataBase = "";

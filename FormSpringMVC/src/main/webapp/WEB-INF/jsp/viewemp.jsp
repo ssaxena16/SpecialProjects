@@ -10,4 +10,6 @@
     
    </tr>  
    </c:forEach>  
-   </table>  
+   </table>
+   <br/>
+   <a href="empform">Add Employee</a>  
