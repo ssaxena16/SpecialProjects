@@ -18,6 +18,7 @@ public class LoginAction extends HttpServlet {
 		String userName = req.getParameter("userName");
 		String password = req.getParameter("passWord");
 		String action = req.getParameter("action");
+		System.out.println("sfsdfsdfsfsfs"+action);
 
 		TestAction test = new TestAction();
 		if ("login".equals(action)) {
