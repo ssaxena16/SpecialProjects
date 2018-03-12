@@ -94,8 +94,6 @@ public class UploadServlet extends HttpServlet {
 				// iterates over form's fields
 				while (iter.hasNext()) {
 					FileItem item = (FileItem) iter.next();
-					System.out.println("Test"+item.getString());
-					System.out.println("Request parameter"+ request.getParameter("action"));
 					// processes only fields that are not form fields
 					if (!item.isFormField()) {
 						String fileName = new File(item.getName()).getName();
