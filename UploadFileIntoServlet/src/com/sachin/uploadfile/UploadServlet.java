@@ -90,6 +90,7 @@ public class UploadServlet extends HttpServlet {
 				// parses the request's content to extract file data
 				List formItems = upload.parseRequest(new ServletRequestContext(request));
 				Iterator iter = formItems.iterator();
+				String filePath = "";
 
 				// iterates over form's fields
 				while (iter.hasNext()) {
@@ -97,7 +98,7 @@ public class UploadServlet extends HttpServlet {
 					// processes only fields that are not form fields
 					if (!item.isFormField()) {
 						String fileName = new File(item.getName()).getName();
-						String filePath = uploadPath + File.separator + fileName;
+						 filePath = uploadPath + File.separator + fileName;
 						File storeFile = new File(filePath);
 
 						// saves the file on disk
@@ -105,6 +106,7 @@ public class UploadServlet extends HttpServlet {
 					}
 				}
 				request.setAttribute("message", "Upload has been done successfully!");
+				request.setAttribute("path",filePath );
 			} catch (Exception ex) {
 				request.setAttribute("message", "There was an error: " + ex.getMessage());
 			}

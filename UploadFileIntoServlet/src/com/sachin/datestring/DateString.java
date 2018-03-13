@@ -7,7 +7,7 @@ public class DateString {
 	{
 		System.out.println("Date is == "+date);
 		System.out.println("File Path is== "+filePath);
-		return ("File Location is "+ filePath + " and Exection Date is  "+date);
+		return ("File Location is "+ filePath + " and Execution Date is  "+date);
 	}
 
 }

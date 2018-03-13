@@ -10,22 +10,21 @@
 <body>
     <center>
         <form method="post" action="UploadServlet" enctype="multipart/form-data" >
-            <table>
-            <tr>
-            <td>Select file to upload:</td>
-            <td> <input type="file" name="uploadFile" /></td>
-            <td><input type="submit" name = "action" value="Upload" />
-            </td>
-            </tr>
-            </table>
+            File Location:
+            <% String path= request.getAttribute("path")!= null ? (String)request.getAttribute("path") : ""; %>
+            <input type = "text" name ="filePath" value = <%= path %>>
+            <br>
+            <input type="file" name="uploadFile" />
+            <input type="submit" name = "action" value="Upload" />
+            <br>
             </form>
+            <br>
             <form method = "post" action = "UploadServlet">
-            <table>
-            <tr>
-            <td>Date - Month - Year :</td><td><input type = "text"  name = "dateString" placeholder = "day- month - year" ></td>
-            <td><input  type="submit" name = "action" value="Submit"/></td>
-            </tr>
-            </table>
+            
+            DD-MM-YY :<input type = "text"  name = "dateString" placeholder = "day- month - year" >
+            <br>
+            <input  type="submit" name = "action" value="Submit"/>
+            
         </form>
     </center>
     <center>
