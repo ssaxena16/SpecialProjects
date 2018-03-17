@@ -27,7 +27,7 @@ import org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext;
  * @author www.codejava.net
  */
 public class UploadServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 102831973239L;
 
 	private static final String UPLOAD_DIRECTORY = "upload";
 	private static final int THRESHOLD_SIZE = 1024 * 1024 * 3; // 3MB

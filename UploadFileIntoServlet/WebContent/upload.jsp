@@ -12,7 +12,7 @@
         <form method="post" action="UploadServlet" enctype="multipart/form-data" >
             File Location:
             <% String path= request.getAttribute("path")!= null ? (String)request.getAttribute("path") : ""; %>
-            <input type = "text" name ="filePath" value = <%= path %>>
+            <input type = "text" disabled name ="filePath" value = <%= path %> >
             <br>
             <input type="file" name="uploadFile" />
             <input type="submit" name = "action" value="Upload" />
