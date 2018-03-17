@@ -1,14 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to My First {{ title }}!
+    <span appChangeText >Welcome to My First {{ title | uppercase}}!</span>
   </h1>
 </div>
 <div>
   Name : <input type="text" value="">
 </div>
 <div> Months:
-  <select>
+  <select  (change) = "functionChageMonth($event)" name = "month">
   <option *ngFor = "let i of months">
     {{i}}
   </option>
@@ -20,4 +20,5 @@
   <ng-template #condition1>It is valid for test</ng-template>
   <ng-template #condition2>It is not valid for test</ng-template>
 </div>
+<button (click) = "functionClickMe($event)"> Click Me </button>
 <app-new-cmp> </app-new-cmp>
