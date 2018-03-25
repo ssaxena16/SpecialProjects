@@ -21,7 +21,8 @@ export class ProductsComponent implements OnInit {
       "color": product.productColor
     }
     console.log(this.projectObj);
-    this.http.post("http://localhost:5555/products/", this.projectObj).subscribe((res:Response) =>
+    this.http.post("http://localhost:5555/products/", this.projectObj)
+    .subscribe((res:Response) =>
     {
       this.isAdded = true
     })

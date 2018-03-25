@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 
 
@@ -14,7 +15,8 @@ import { ProductsComponent } from './products/products.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    ProductsComponent
+    ProductsComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,10 @@ import { ProductsComponent } from './products/products.component';
         {
           path: "products",
           component: ProductsComponent
+        },
+        {
+          path: "updateProducts/:id",
+          component: UpdateProductComponent
         }
       ]
     )

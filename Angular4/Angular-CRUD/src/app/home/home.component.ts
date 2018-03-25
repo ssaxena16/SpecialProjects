@@ -26,9 +26,10 @@ deleteProduct = function(id)
  {
    if(confirm("Are you sure want to delete the item"))
    {
-   return this.http.delete("http://localhost:5555/products/"+id,{ headers: this.headers}).toPromise().then(() =>{
-
-       console.log("Testing ");
+   return this.http.delete("http://localhost:5555/products/"+id,{ headers: this.headers})
+   .toPromise()
+   .then(() =>{
+      console.log("Testing ");
      this.getProductsData();
    })
  }
