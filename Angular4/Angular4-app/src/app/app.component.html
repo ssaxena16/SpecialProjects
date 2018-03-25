@@ -21,4 +21,19 @@
   <ng-template #condition2>It is not valid for test</ng-template>
 </div>
 <button (click) = "functionClickMe($event)"> Click Me </button>
-<app-new-cmp> </app-new-cmp>
+<a routerLink = "new-cmp">New component</a>
+
+<ul  *ngFor =  "let data of httpdata" >
+  <li> Name: {{data.name}}   Address: {{data.address.city}}</li>
+</ul>
+
+<form [formGroup]="formdata" (ngSubmit) = "onclickSubmit(formdata.value)">
+Email: <input type ="text" class = "fortextbox" name = "emailid" placeholder="Email" formControlName ="emailid">
+<br>
+PassWord: <input type ="text" class = "fortextbox" name = "password" placeholder="Password" formControlName ="password">
+<br>
+<input type = "submit" class="forsubmit" value ="submit">
+<br>
+{{emailid}}
+</form>
+<router-outlet></router-outlet>

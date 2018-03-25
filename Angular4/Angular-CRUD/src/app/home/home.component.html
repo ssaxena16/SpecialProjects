@@ -1,0 +1,23 @@
+<div>
+<h1> Home Page </h1>
+</div>
+
+
+<table>
+  <tr>
+    <th>Product Name </th>
+    <th>Color</th>
+    <th>DeleteOperation</th>
+    <th>UpdateOperation</th>
+  </tr>
+  <tr *ngFor = "let data of jsonData" >
+    <td> {{data.name}}</td>
+    <td> {{data.color}}</td>
+    <td (click) = "deleteProduct(data.id)"><a>Delete</a></td>
+    <td (click) = "updateProduct(data.id)"><a>Delete</a></td>
+  </tr>
+</table>
+<br>
+<div>
+  <a href="products">Add New Product</a>
+</div>

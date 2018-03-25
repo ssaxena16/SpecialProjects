@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NewCmpComponent } from './new-cmp/new-cmp.component';
 import { ChangeTextDirective } from './change-text.directive';
@@ -11,10 +12,21 @@ import { ChangeTextDirective } from './change-text.directive';
   declarations: [
     AppComponent,
     NewCmpComponent,
-    ChangeTextDirective
+    ChangeTextDirective,
+
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+
+    HttpModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot([
+      {
+        path: 'new-cmp',
+        component: NewCmpComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
