@@ -22,7 +22,9 @@ class Company
 	}
 	public void informationAboutComp()
 	{
-		System.out.println(""+comp_id+"   "+companyName);
+		int a = comp_id;
+		String b = companyName;
+		System.out.println(""+a+"   "+b);
 	}
 }
 public class TestCopyConstructor {
