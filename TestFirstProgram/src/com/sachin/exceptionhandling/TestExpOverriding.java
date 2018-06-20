@@ -15,7 +15,7 @@ class Child extends Parent
 {
    public void test() throws ArithmeticException
    {
-	   
+	   System.out.println("cdsf");
    }
 }
 public class TestExpOverriding {

@@ -20,8 +20,8 @@ class Address
 	public String getState() {
 		return State;
 	}
-	public void setState(String state) {
-		State = state;
+	public void setState(String State) {
+		this.State = State;
 	}
 	
 	public String toStringring()
@@ -94,12 +94,12 @@ public class TestShalowCopy {
 		System.out.println(""+emp);
 		
 		Empoyee empclone = (Empoyee)emp.clone();
-		
+		 
 		System.out.println(""+empclone);
 		
 		emp.setName("Ajay");
 		
-		address.setHouse_no("1234");
+		address.setHouse_no("1234" );
 		address.setCity("Indore");
 		address.setState("MP");
 		emp.setAddress(address);

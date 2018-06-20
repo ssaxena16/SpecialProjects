@@ -31,7 +31,7 @@ public class TestArrayCopy {
 		
 		for(int i : arr)
 		{
-		//	System.out.println(""+i);
+			System.out.println(""+i);
 		}
 
 	}
