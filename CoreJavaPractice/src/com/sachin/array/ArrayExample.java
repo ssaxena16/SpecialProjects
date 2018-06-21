@@ -1,10 +1,16 @@
 package com.sachin.array;
 
+import java.util.Arrays;
+
 public class ArrayExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		 final int[] testArray = {1,2,3,4};
+		 
+		 
 		int[] array = {1,2,3,4,5,6,7};
+		
 		for(int a : array)
 		{
 			System.out.println(""+a);
@@ -26,11 +32,23 @@ public class ArrayExample {
 			{
 				System.out.println(intArray[i][j]);
 			}
+			
+	   int[] firstArray = {2,7};
+	   int[] secondArray = {2,7};
+	   if (Arrays.equals(firstArray, secondArray))
+	   {
+		   System.out.println("Same");
+	   }
+		   else
+		   {
+			   System.out.println("Not Same*");
+		   }
+	   }
 		}
 
 	}
 
-}
+
 
 class Student 
 {
