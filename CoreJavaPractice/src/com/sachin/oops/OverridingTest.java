@@ -8,6 +8,8 @@ public class OverridingTest {
 		// TODO Auto-generated method stub
 		Parent parent = new Parent();
 		parent = new Child();
+		System.out.println(""+parent.a);
+		System.out.println(""+new Child().a);
 		parent.m2();
 
 	}
@@ -16,6 +18,7 @@ public class OverridingTest {
 
 class Parent
 {
+	 int a = 15;
 	public void conceptOverride() 
 	{
 		
@@ -25,7 +28,7 @@ class Parent
 	System.out.println("Parent static");	
 	}
 	
-	private void test()
+	protected void test()
 	{
 		
 	}
@@ -33,6 +36,7 @@ class Parent
 
 class Child extends Parent
 {
+	int a = 21;
 	public void conceptOverride() 
 	{
 		

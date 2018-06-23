@@ -13,6 +13,8 @@ public class ArraysSortExample {
 		Employee[] emp = {emp1,emp2,emp3};
 		Arrays.sort(emp, new EmpNo());
 		System.out.println(Arrays.toString(emp));
+		int i = Arrays.binarySearch(emp, new Employee(105, "Emp2"));
+		System.out.println(i);
 
 	}
 
