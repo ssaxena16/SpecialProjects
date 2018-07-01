@@ -71,7 +71,7 @@ class JdbcSingleton {
 			rs = preparedStatement.executeQuery();
 			ResultSetMetaData rsmd = rs.getMetaData();
 			System.out.println("No of colums == "+rsmd.getColumnCount());
-			System.out.println("Column 1 name"+rsmd.getColumnName(1)+"Column 2 name"+rsmd.getTableName(2));
+			System.out.println("Column 1 name "+rsmd.getColumnName(1)+" Column 2 name "+rsmd.getTableName(2));
 			while (rs.next()) {
 				System.out.println("Username  ====  " + rs.getString(2) + "PassWord  ====== " + rs.getString(3));
 			}
@@ -131,7 +131,17 @@ public class JDBCSingletonDemo {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int choice = 0;
 		do {
-			choice = Integer.parseInt(br.readLine());
+			System.out.println("Please choose a value for perform the db operation");
+
+			String enteredChoice = br.readLine();
+            if(enteredChoice.matches("-?\\d+"))
+			{
+			choice = Integer.parseInt(enteredChoice);
+			}
+			else
+			{
+              continue;
+			}
 			switch (choice) {
 			case 1:
 				try {
@@ -204,7 +214,7 @@ public class JDBCSingletonDemo {
 			}
 			continue;
 
-		} while (choice != 4);
+		} while (choice != 5);
 	}
 
 }
