@@ -33,13 +33,13 @@ public class EmployeeDao {
 
 	}
 
-	public static java.util.List<Employee> getEmployees() throws ClassNotFoundException, SQLException {
+	public static java.util.List<Employee> getEmployees(int start, int max) throws ClassNotFoundException, SQLException {
 		Connection conn = ConnectionUtil.getConnection();
 		PreparedStatement ps = null;
 		java.util.List<Employee> list = new ArrayList<Employee>();
 		ResultSet rs = null;
 		try {
-			ps = (PreparedStatement) conn.prepareStatement("select * from tk_employee");
+			ps = (PreparedStatement) conn.prepareStatement("select * from tk_employee limit "+""+(start-1)+","+max);
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				Employee employee = new Employee();

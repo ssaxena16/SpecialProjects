@@ -21,11 +21,27 @@ public class ViewEmployees extends HttpServlet {
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
 		try {
-			List<Employee> employeeList = EmployeeDao.getEmployees();
-			out.print("<a href ='index.html'> Back </a><br>");
+
+			int maxRecord = 2;
+			int start = 1;
+
+			if (req.getParameter("page") != null) {
+				int pageId = Integer.parseInt(req.getParameter("page"));
+				if (pageId == 1) {
+					start = pageId;
+				} else {
+					pageId = pageId - 1;
+					start = pageId * maxRecord + 1;
+					maxRecord = pageId * maxRecord;
+				}
+			}
+
+			List<Employee> employeeList = EmployeeDao.getEmployees(start, maxRecord);
+
 			if (employeeList.size() > 0) {
-				out.print("<table border='1' width='100%'>" + "<tr><th> EmpName </th>" + "<th> Password</th>"
-						+ "<th> Email</th>" + "<th> Country</th>" +"<th> Edit</th>"+"<th> Delete</th>"+ "</tr>");
+				out.print("<h1>Employee Records</h1>");
+				out.print("<html><body><table border='1' width='60%'>" + "<tr><th> EmpName </th>" + "<th> Password</th>"
+						+ "<th> Email</th>" + "<th> Country</th>" + "<th> Edit</th>" + "<th> Delete</th>" + "</tr>");
 
 				for (Employee employee : employeeList) {
 					out.print("<tr>");
@@ -33,13 +49,20 @@ public class ViewEmployees extends HttpServlet {
 					out.print("<td>" + employee.getEmployeePassword() + "</td>");
 					out.print("<td>" + employee.getEmployeeEmail() + "</td>");
 					out.print("<td>" + employee.getCountry() + "</td>");
-					out.print("<td>"+"<a href ="+ "edit-employee?employeeId="+employee.getId() +"> Edit </a>"+"</td>");
-					out.print("<td>"+"<a href ="+ "delete-employee?employeeId="+employee.getId() +"> Delete </a>"+"</td>");
+					out.print("<td>" + "<a href =" + "edit-employee?employeeId=" + employee.getId() + "> Edit </a>"
+							+ "</td>");
+					out.print("<td>" + "<a href =" + "delete-employee?employeeId=" + employee.getId() + "> Delete </a>"
+							+ "</td>");
 
 					out.print("</tr>");
 				}
 				out.print("</table");
-
+				out.print("<br>");
+				out.print("<div><a href ='index.html'> Back </a><br>");
+				out.print("<a href = 'view-employess?page=1'>1</a>");
+				out.print("<a href = 'view-employess?page=2'>2</a>");
+				out.print("<a href = 'view-employess?page=3'>3</a></div>");
+				out.print("</body></html>");
 			} else {
 				out.print("<html><body><h1>No Record has been found</h1></body></html>");
 			}
