@@ -1,0 +1,7 @@
+package com.sachin;
+
+import javax.servlet.http.HttpServlet;
+
+public class ProfileAction extends HttpServlet{
+
+}

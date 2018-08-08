@@ -1,0 +1,29 @@
+package com.sachin.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ServletFirstAction extends HttpServlet {
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+        resp.setContentType("text/html");
+        PrintWriter out = resp.getWriter();
+        String test = req.getParameter("userName");
+        System.out.println("TT"+test);
+        out.print("<html><body>");
+        out.print("<form action= 'servlet2'");
+        out.print("<input type ='hidden' name = 'userInfo' value = "+test +"</input>");
+        out.print("<input type = 'submit' value= 'go'"+"</input>");
+        out.print("</form></body></html>");
+        
+	}
+	
+
+}

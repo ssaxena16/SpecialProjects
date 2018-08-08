@@ -1,0 +1,10 @@
+127.0.0.1 - - [29/Jul/2018:22:21:54 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [29/Jul/2018:22:21:55 +0530] "GET /FirstServletExample/ HTTP/1.1" 200 337
+0:0:0:0:0:0:0:1 - - [29/Jul/2018:22:21:58 +0530] "GET /FirstServletExample/FirstExampleServlet?userName=&passWord= HTTP/1.1" 500 1767
+127.0.0.1 - - [29/Jul/2018:22:27:47 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [29/Jul/2018:22:27:48 +0530] "GET /FirstServletExample/ HTTP/1.1" 200 337
+0:0:0:0:0:0:0:1 - - [29/Jul/2018:22:27:48 +0530] "GET /favicon.ico HTTP/1.1" 404 973
+0:0:0:0:0:0:0:1 - - [29/Jul/2018:22:27:58 +0530] "GET /FirstServletExample/FirstExampleServlet?userName=h&passWord=pp HTTP/1.1" 500 1767
+127.0.0.1 - - [29/Jul/2018:22:29:21 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [29/Jul/2018:22:29:24 +0530] "GET /FirstServletExample/FirstExampleServlet?userName=&passWord= HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [29/Jul/2018:22:29:26 +0530] "GET /FirstServletExample/success.jsp HTTP/1.1" 200 281

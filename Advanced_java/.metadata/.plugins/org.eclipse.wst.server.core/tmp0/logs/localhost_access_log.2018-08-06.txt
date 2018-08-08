@@ -1,0 +1,4 @@
+127.0.0.1 - - [06/Aug/2018:23:59:39 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [06/Aug/2018:23:59:40 +0530] "GET /ServletContextEventExample/ HTTP/1.1" 200 170
+0:0:0:0:0:0:0:1 - - [06/Aug/2018:23:59:41 +0530] "GET /favicon.ico HTTP/1.1" 404 973
+0:0:0:0:0:0:0:1 - - [06/Aug/2018:23:59:44 +0530] "GET /ServletContextEventExample/servlet1 HTTP/1.1" 500 1424

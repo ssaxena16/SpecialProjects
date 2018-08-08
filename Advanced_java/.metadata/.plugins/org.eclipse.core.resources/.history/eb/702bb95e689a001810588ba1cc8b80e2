@@ -1,0 +1,31 @@
+package com.sachin.dao;
+
+import java.sql.SQLException;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
+import com.sachin.beans.Employee;
+import com.sachin.db.ConnectionUtil;
+
+public class EmployeeDao {
+	public static int addEmployee(Employee emp) throws ClassNotFoundException, SQLException {
+		Connection conn = ConnectionUtil.getConnection();
+		PreparedStatement ps = null;
+		int result = 0;
+		try {
+			ps = (PreparedStatement) conn.prepareStatement(
+					"insert into tk_employee(tk_empname,tk_password,tk_email,tk_country) values (?,?,?,?)");
+			ps.setString(0, emp.getEmployeeName());
+			ps.setString(2, emp.getEmployeePassword());
+			ps.setString(3, emp.getEmployeeEmail());
+			ps.setString(4, emp.getCountry());
+			result = ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return result;
+
+	}
+
+}

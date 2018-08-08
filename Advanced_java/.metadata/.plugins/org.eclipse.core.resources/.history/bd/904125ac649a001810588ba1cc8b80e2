@@ -1,0 +1,5 @@
+package com.sachin.beans;
+
+public class Employee {
+
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="add-employee" method = "post">
+Name: <input type = "text" name = "employeeName" >
+Password: <input type = "text" name = "employeePassword" >
+Email:  <input type = "text" name = "employeeEmail" >
+country: <select name = "country" style="width:150px">
+<option> India</option>
+<option> USA</option>
+<option> UK</option>
+<option> France</option>
+
+</select>
+
+
+</form>
+
+</body>
+</html>

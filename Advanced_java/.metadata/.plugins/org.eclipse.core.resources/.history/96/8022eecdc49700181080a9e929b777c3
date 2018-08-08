@@ -1,0 +1,20 @@
+package com.sachin.database;
+
+public class QueryUtil {
+	
+	public static  QueryUtil queryUtil=null;
+	private QueryUtil()
+	{
+		
+	}
+	public static QueryUtil getQueryObject()
+	{
+		if(queryUtil == null )
+		{
+			queryUtil = new QueryUtil();
+		}
+		return queryUtil;
+		
+	}
+
+}

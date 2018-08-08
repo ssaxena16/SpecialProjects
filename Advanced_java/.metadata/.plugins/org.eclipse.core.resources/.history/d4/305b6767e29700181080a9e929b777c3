@@ -1,0 +1,45 @@
+package com.sachin.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.sachin.database.QueryUtil;
+
+public class LoginServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		resp.setContentType("text/html");
+		PrintWriter out = resp.getWriter();
+
+		System.out.println("Test");
+		String userName = req.getParameter("userName");
+		String password = req.getParameter("passWord");
+		QueryUtil query = QueryUtil.getQueryObject();
+		// if ("ssachin".equals(userName) && "sachin123".equals(password)) {
+		try {
+			if (query.isUserAuthorized(userName, password)) {
+				System.out.println("Test2");
+				RequestDispatcher rd = req.getRequestDispatcher("DisplayServlet");
+				rd.forward(req, resp);
+			} else {
+				out.print("Sorry Wrong User or Password");
+				RequestDispatcher rd = req.getRequestDispatcher("/index.html");
+				rd.include(req, resp);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

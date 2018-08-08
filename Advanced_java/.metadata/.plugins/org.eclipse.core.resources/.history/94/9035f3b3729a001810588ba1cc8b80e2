@@ -1,0 +1,7 @@
+package com.sachin.servlets;
+
+import javax.servlet.http.HttpServlet;
+
+public class ViewEmployees extends HttpServlet {
+
+}
