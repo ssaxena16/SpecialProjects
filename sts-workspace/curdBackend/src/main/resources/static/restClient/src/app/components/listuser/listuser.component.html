@@ -1,12 +1,20 @@
+<div class = "container">
 <table>
   <tr>
+    <th>Id</th>
     <th>FirstName </th>
     <th>LastName</th>
+    <th>Operation</th>
 
   </tr>
   <tr *ngFor = "let data of users" >
+    <td> {{data.id}}</td>
     <td> {{data.fname}}</td>
     <td> {{data.lname}}</td>
-  
+    <td><button class ="btn btn-primary" (click)="updateUser(data)" > Update </button>
+      <button class ="btn btn-danger" (click) = "deleteUser(data)"> Delete </button></td>
+
   </tr>
 </table>
+   <button class = "btn btn-primary" (click) = "createUser()"> NewUser</button>
+</div>
