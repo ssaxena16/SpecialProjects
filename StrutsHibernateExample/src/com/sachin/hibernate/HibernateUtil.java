@@ -1,3 +1,4 @@
+
 package com.sachin.hibernate;
 
 import org.hibernate.SessionFactory;

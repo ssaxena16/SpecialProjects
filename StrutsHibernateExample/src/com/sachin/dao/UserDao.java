@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 
 import com.sachin.hibernate.HibernateUtil;
 import com.sachin.persistence.User;
@@ -56,8 +55,7 @@ public class UserDao {
 		List<User> users = null;
 		try {
 			session.beginTransaction();
-			users = session.createQuery("from User where username like :name" ).setParameter("name", "%" + name + "%")
-					.list();
+			users = session.createQuery("from User where username like :name" ).setParameter("name", "%" + name + "%").list();
 			session.getTransaction().commit();
 		} catch (Exception e) {
 			System.err.println("Error getting Users :" + e);
