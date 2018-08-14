@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name = "com.sachin.persistent.Employee" table="employee_single_per_inheritance" discriminator-value="emp">
+<id name= "id" type="int">
+<generator class="increment"></generator>
+</id>
+<discriminator column= "type" type="string"></discriminator>
+<property name="name" type= "string">
+<column name="employee_name"></column>
+</property>
+<subclass name = "com.sachin.persistent.Regular_Employee" discriminator-value="reg_emp">
+<property name="salary" type="float">
+<column name="salary"></column>
+</property>
+<property name="bonus" type = "int">
+<column name="bonus"></column>
+</property>
+</subclass>
+<subclass name ="com.sachin.persistent.Contract_Employee" discriminator-value="cont_emp" >
+<property name="pay_per_hour" type ="float">
+<column name="pay_per_hour"></column>
+</property>
+<property name="contract_period" type= "string">
+<column name="contact_period"></column>
+</property>
+</subclass>
+</class>
+</hibernate-mapping>
