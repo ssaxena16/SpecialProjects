@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name = "com.sachin.persistent.Question" table= "question1">
+<id name= "questionNo">
+<generator class="increment"></generator>
+</id>
+<property name="question" type = "string"></property>
+
+<set name="answer" table = "answer1">
+<key column="questionNo"></key>
+<element column="answer" type = "string"></element>
+</set>
+
+</class>
+
+<!-- Using Bag -->
+<!-- <class name = "com.sachin.persistent.Question" table = "question1">
+<id name="questionNo" type = "int">
+<generator class="increment"></generator>
+</id>
+<property name="question" type = "string"></property>
+<bag name="answer" table = "answer1">
+<key column="questionNo"></key>
+<element column="answer" type="string"></element>
+</bag>
+
+</class> -->
+
+
+<!-- Using List -->
+<!-- <class name = "com.sachin.persistent.Question" table = "question1">
+<id name="questionNo" type = "int">
+<generator class="increment"></generator>
+</id>
+<property name="question" type ="string"></property>
+<list name="answer">
+<key column="questionNO"></key>
+<index column="type"></index>
+<element column = "answer" type = "string"></element>
+</list>
+</class> -->
+
+</hibernate-mapping>
