@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Table per superclass -->
 <hibernate-mapping>
+<class  name = "com.sachin.persistent.Employee" table = "employee1">
+<id name = "id" type ="int">
+<generator class="increment"></generator>
+</id>
+<property name="name" type = "string"></property>
+<joined-subclass name = "com.sachin.persistent.Regular_Employee" table = "regular_employee1">
+<key column="id"></key>
+<property name="salary" type = "float"></property>
+<property name="bonus" type = "int"></property>
+</joined-subclass>
+<joined-subclass name = "com.sachin.persistent.Contract_Employee" table= "contract_employee1">
+<key column="id"></key>
+<property name="pay_per_hour" type = "float"></property>
+<property name="contract_period" type = "string"></property>
+</joined-subclass>
+</class>
+</hibernate-mapping>
+
+
+
+<!-- table per concrete class  -->
+<!-- <hibernate-mapping>
+<class name = "com.sachin.persistent.Employee" table = "employee">
+<id name="id"  type = "int">
+<generator class="increment"></generator>
+</id>
+<property name="name" type="string"></property>
+<union-subclass name="com.sachin.persistent.Regular_Employee" table = "regular_employee">
+<property name="salary" type = "float"></property>
+<property name="bonus" type = "int"></property>
+</union-subclass>
+<union-subclass name = "com.sachin.persistent.Contract_Employee" table="contract_employee">
+<property name="pay_per_hour" type="float"></property>
+<property name="contract_period" type = "string">
+</property>
+</union-subclass>
+</class>
+</hibernate-mapping> -->
+
+<!-- Table per single inheritance  -->
+
+<!-- <hibernate-mapping>
 <class name = "com.sachin.persistent.Employee" table="employee_single_per_inheritance" discriminator-value="emp">
 <id name= "id" type="int">
 <generator class="increment"></generator>
@@ -27,4 +71,4 @@
 </property>
 </subclass>
 </class>
-</hibernate-mapping>
+</hibernate-mapping> -->
