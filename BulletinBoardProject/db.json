@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "username": "Sachin",
+      "email": "ssaxena@watermarkinsights.com",
+      "password": "Test@123",
+      "disable": "true",
+      "requirements": "",
+      "profileImage": "",
+      "id": 1
+    },
+    {
+      "username": "Kashish",
+      "email": "test@gmail.com",
+      "password": "Test@123",
+      "disable": "true",
+      "id": 2
+    },
+    {
+      "username": "Gourav",
+      "email": "test1@gmail.com",
+      "password": "Test@123",
+      "disable": "true",
+      "id": 3
+    }
+  ]
+}
