@@ -117,11 +117,7 @@
         };
       $.getJSON("http://localhost:3000/users", data, function(user){
         if(user.length == 1){
-          var userSession = {
-              expiresAt: 20,
-              user: user
-          }
-          localStorage.setItem("userSession", JSON.stringify(userSession));
+          localStorage.setItem("userSession", JSON.stringify(user[0]));
           window.location = window.location.hostname + "/BulletinBoardProject/app/dashboard.html";
         }
       });

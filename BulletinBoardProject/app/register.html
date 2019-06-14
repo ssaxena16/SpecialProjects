@@ -111,7 +111,7 @@
             } else {
                 $(this).addClass('has-error')
                 count--;
-            }            
+            }
           }
           else if($(this).attr('id') == 'user-password'){
             if(IsPasswordValid($(this).val())){
@@ -150,7 +150,6 @@
             password: password,
             disable: true
           };
-          console.log(user)
           $.post("http://localhost:3000/users", user)
           .done(function( data ) {
             window.location = window.location.hostname + "/BulletinBoardProject/app/login.html";

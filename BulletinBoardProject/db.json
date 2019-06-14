@@ -5,22 +5,70 @@
       "email": "ssaxena@watermarkinsights.com",
       "password": "Test@123",
       "disable": "true",
-      "requirements": "",
-      "profileImage": "",
+      "id": 1,
+      "requirements": [
+        {
+          "id": 1,
+          "title": "ddd",
+          "description": "dddd",
+          "time": "2019-06-14T09:56:58.483Z",
+          "priority": "Low"
+        },
+        {
+          "id": 2,
+          "title": "dddd",
+          "description": "dddd",
+          "time": "2019-06-14T09:58:44.075Z",
+          "priority": "None"
+        }
+      ]
+    },
+    {
+      "username": "gourav",
+      "email": "g@gmail.com",
+      "password": "Test@123",
+      "disable": "true",
+      "id": 2,
+      "requirements": [
+        {
+          "id": 1,
+          "title": "Test",
+          "description": "Test",
+          "time": "2019-06-14T10:44:51.427Z",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "requirementId": "1",
+      "time": "Fri Jun 14 2019 15:26:58 GMT+0530 (India Standard Time)",
+      "priority": "Low",
+      "userId": "1",
+      "username": "Sachin",
+      "title": "ddd",
+      "description": "dddd",
       "id": 1
     },
     {
-      "username": "Kashish",
-      "email": "test@gmail.com",
-      "password": "Test@123",
-      "disable": "true",
+      "requirementId": "2",
+      "time": "Fri Jun 14 2019 15:28:44 GMT+0530 (India Standard Time)",
+      "priority": "None",
+      "userId": "1",
+      "username": "Sachin",
+      "title": "dddd",
+      "description": "dddd",
       "id": 2
     },
     {
-      "username": "Gourav",
-      "email": "test1@gmail.com",
-      "password": "Test@123",
-      "disable": "true",
+      "requirementId": "1",
+      "time": "Fri Jun 14 2019 16:14:51 GMT+0530 (India Standard Time)",
+      "priority": "High",
+      "userId": "2",
+      "username": "gourav",
+      "title": "Test",
+      "description": "Test",
       "id": 3
     }
   ]
