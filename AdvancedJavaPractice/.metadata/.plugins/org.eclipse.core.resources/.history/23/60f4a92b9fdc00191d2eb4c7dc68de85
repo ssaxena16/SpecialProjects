@@ -1,0 +1,21 @@
+package com.sachin.design_pattern;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static void test(int num, int times)
+	{
+		String number = String.valueOf(num);
+		for(int i = 1; i<times;i++)
+		{
+			number = number+String.valueOf(num);
+		}
+		
+		System.out.println(" "+number);
+	}
+
+}

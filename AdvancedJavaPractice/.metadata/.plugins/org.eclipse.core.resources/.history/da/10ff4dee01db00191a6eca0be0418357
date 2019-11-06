@@ -1,0 +1,15 @@
+package com.sachin.core_java;
+
+public class SwappingTwoNoInOneLine {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//final double a = 1/2;
+		int a=1;
+		int b=2;
+		a=a^b^(b=a);
+		System.out.println(" "+a+" "+b);
+
+	}
+
+}

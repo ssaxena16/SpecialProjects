@@ -1,0 +1,18 @@
+package com.sachin.core_java;
+
+public class TestConcept {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+	}
+	
+	
+
+}
+
+class Test
+{
+	
+}

@@ -1,0 +1,31 @@
+package com.sachin.logical_program;
+
+public class PrimeNo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		printPrimeNos(100);
+
+	}
+
+	public static void printPrimeNos(int range) {
+		for (int i = 2; i < range; i++) {
+			boolean flag = true;
+			for (int j = i; j <= Math.sqrt(i); j++) {
+				if (i == 2) {
+					System.out.print(" " + i);
+				} else if (i % j == 0) {
+					flag = false;
+					break;
+				} else {
+					continue;
+				}
+			}
+
+			if (flag) {
+				System.out.print(" " + i);
+			}
+		}
+	}
+
+}

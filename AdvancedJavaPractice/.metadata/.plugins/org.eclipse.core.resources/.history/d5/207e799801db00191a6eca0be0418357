@@ -1,0 +1,12 @@
+package com.sachin.core_java;
+
+public class SwappingTwoNoInOneLine {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		final double a = 1/2;
+		System.out.println(" "+a);
+
+	}
+
+}

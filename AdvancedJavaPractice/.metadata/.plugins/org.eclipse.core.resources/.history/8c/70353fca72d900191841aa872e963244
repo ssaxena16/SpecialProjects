@@ -1,0 +1,26 @@
+package com.sachin.core_java;
+
+public class NumberGetOneDigit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("   " + convertSingleDigitNo(68954));
+
+	}
+
+	public static int convertSingleDigitNo(int number) {
+		if (number / 10 == 0) {
+			return number;
+		} else {
+			int sum = 0;
+			while (number > 0) {
+				int rem = number % 10;
+				number = number / 10;
+				sum = sum + rem;
+			}
+			return convertSingleDigitNo(sum);
+		}
+
+	}
+
+}
